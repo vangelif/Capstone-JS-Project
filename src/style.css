@@ -1,6 +1,31 @@
-h1 {
-    color: orange;
+* {
+  color: black;
 }
-body{
-    background: url('./asset/logo.jpeg');
+
+body {
+  background-color: powderblue;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  height: 5rem;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  letter-spacing: 0.2em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
