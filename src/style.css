@@ -28,14 +28,64 @@ header div i {
 
 li {
   list-style: none;
+  font-size: 16px;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 0;
+  padding-right: 20px;
+  margin: auto;
+  width: 100%;
+}
+
+.movie-cards {
+  /* text-align: center; */
+  background-color: lightpink;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-title {
+  text-align: center;
+  color: #464646;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  width: 340px;
+  height: 400px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: grey;
+  border: 1px solid beige;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 
 a {
   text-decoration: none;
 }
 
 footer {
-  position: fixed;
   border: 3px solid black;
   text-align: center;
   width: 95%;
