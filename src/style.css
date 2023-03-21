@@ -58,13 +58,14 @@ button {
 }
 
 button:hover {
-  margin: 5px solid black;
-  margin-bottom: 3px solid black;
+  border: 5px solid black;
+  border-bottom: 3px solid black;
 }
 
 #close-button {
   cursor: pointer;
   display: flex;
+  justify-content: flex-end;
 }
 
 .container {
@@ -102,13 +103,9 @@ button:hover {
 #popup-window div > h4 {
   padding: 10px;
 }
+
 #popup-window div > span {
   padding: 10px;
-}
-
-#close-button {
-  display: flex;
-  justify-content: flex-end;
 }
 
 form {
