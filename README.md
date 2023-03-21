@@ -17,9 +17,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [LEADERBOARD] <a name="about-project"></a>
+# 📖 [Capstone Project] <a name="about-project"></a>
 
-**LEADERBOARD** is a project that we are applying our knowledge on HTML and CSS and Javascript to store the name and score of its participant.
+**Capstone Project** is a project that we are applying our knowledge on HTML and CSS and Javascript to store the name and score of its participant.
 
 ## 🛠 Built With <a name="built-with"></a>
 

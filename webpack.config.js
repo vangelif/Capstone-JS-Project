@@ -14,19 +14,14 @@ module.exports = {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: [
-          'style-loader', 'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
-
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
 
         type: 'asset/resource',
-
       },
     ],
-    
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -35,7 +30,4 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
-  
-
-      
 };
