@@ -10,17 +10,22 @@ body {
 }
 
 header {
-  background-color: bisque;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 3.5rem;
   height: 5rem;
   font-weight: 700;
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
   letter-spacing: 0.2em;
+  border: 3px solid black;
 }
+
+header img {
+  width: 2rem;
+  height: 2rem;
+} 
 
 li {
   list-style: none;
@@ -28,4 +33,16 @@ li {
 
 a {
   text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  border: 3px solid black;
+  text-align: center;
+  width: 95%;
+  bottom: 0;
+  font-size: 15px;
+  padding-block: 15px;
+  letter-spacing: 00.2em;
+  margin-left: 30px;
 }
