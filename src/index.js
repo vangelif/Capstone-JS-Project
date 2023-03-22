@@ -1,18 +1,29 @@
 import './style.css';
-import { movieList } from './homepage.js';
-// import { displayPopup } from './modules/popup.js';
+import { movieList } from './modules/homepage.js';
+import popup from './modules/popup.js';
 
-const commentsBtn = document.getElementById('comments');
+// const popupWrapper = document.getElementById('popup-wrapper');
+// const commentsBtn = document.getElementsByClassName('.comment-button');
 const closeBtn = document.getElementById('close-button');
-const popUp = document.getElementById('popup-window');
-
-commentsBtn.addEventListener('click', () => {
-  popUp.style.visibility = 'visible';
-});
-
-closeBtn.addEventListener('click', () => {
-  popUp.style.visibility = 'hidden';
-});
-
 movieList();
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the commentsBtn element after the DOM has loaded
+  const commentsBtn = document.querySelectorAll('[data-target]');
+  console.log(commentsBtn);
+  commentsBtn.forEach((button) => {
+    button.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const targetModal = document.querySelector(
+        event.target.getAttribute('data-target')
+      );
+      console.log(`target Model:${targetModal}`);
+      await popup(event);
+      targetModal.style.display = 'block';
+    });
+  });
+});
+
+// commentsBtn.addEventListener('click', openPopup);
+// CardContainer.addEventListener('click', popup);
+// document.addEventListener('click', displayPopup);

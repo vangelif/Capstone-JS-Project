@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: powderblue;
+  background-color: rgb(176, 224, 230);
   text-decoration: none;
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
@@ -44,7 +44,7 @@ li {
 
 .movie-cards {
   /* text-align: center; */
-  background-color: lightpink;
+  /* background-color: lightpink; */
   padding: 10px;
   border-radius: 5px;
   margin: 0;
@@ -97,15 +97,6 @@ footer {
   margin-left: 30px;
 }
 
-button {
-  padding: 0.5rem 6rem;
-  background-color: lightgray;
-  outline: none;
-  font-weight: 600;
-  margin: 0;
-  cursor: pointer;
-}
-
 button:hover {
   border: 5px solid black;
   border-bottom: 3px solid black;
@@ -121,21 +112,33 @@ button:hover {
   position: relative;
 }
 
-#popup-window {
-  width: 45%;
-  min-height: 90vh;
-  transition: 0.5s;
-  padding: 50px;
+section.popup-section {
+  border: 3px solid black;
+}
+
+section #popup-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   text-align: center;
-  background-color: lightpink;
-  visibility: hidden;
-  border-radius: 10px;
-  z-index: 3;
-  margin: auto;
+  background-color: rgb(176, 224, 230, 0.7);
+  z-index: 1;
+}
+
+section #popup-window {
+  background-color: rgba(255, 188, 193);
+  margin: 10% auto;
+  width: 25%;
+  padding: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5), 0 7px 50px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
 }
 
 .popup-image {
-  border: 2px solid red;
   padding: 10px;
 }
 
