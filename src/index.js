@@ -1,4 +1,5 @@
 import './style.css';
+import { movieList } from './homepage.js';
 // import { displayPopup } from './modules/popup.js';
 
 const commentsBtn = document.getElementById('comments');
@@ -12,3 +13,6 @@ commentsBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
   popUp.style.visibility = 'hidden';
 });
+
+movieList();
+
