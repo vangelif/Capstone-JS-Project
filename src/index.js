@@ -1,4 +1,5 @@
 import './style.css';
+import { displayPopup } from './modules/popup.js';
 
 const commentsBtn = document.getElementById('comments');
 const closeBtn = document.getElementById('close-button');
