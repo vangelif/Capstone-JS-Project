@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await movieList();
   const cardContainer = document.querySelector('.card-container');
   const xButton = document.getElementById('x-button');
-  const submitComment = document.getElementById('submit-button');
+  // const submitComment = document.getElementById('submit-button');
 
   cardContainer.addEventListener('click', async (event) => {
     if (event.target.matches('.comment-button')) {
