@@ -36,16 +36,17 @@
             <span id="comment-counter">(2)</span>
             <table>
               <tbody id="table-body">
-                <tr>
+                <!-- <tr>
                   <td>date</td>
                   <td>name</td>
                   <td>textarea</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
-            <form>
+            <form id="comment-form">
               <div>
                 <input
+                  id="username"
                   type="text"
                   placeholder="Your name"
                   maxlength="30"
@@ -54,6 +55,7 @@
               </div>
               <div>
                 <textarea
+                  id="insights"
                   name="comment"
                   placeholder="Your insight"
                   maxlength="80"
