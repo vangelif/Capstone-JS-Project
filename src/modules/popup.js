@@ -1,7 +1,6 @@
 import getShowById from './show.js';
 import { getComments, giveComments } from './comments.js';
 import modalShow from './modalShow.js';
-import { validate } from 'schema-utils';
 
 const popup = async (movieCard) => {
   const movieTitle = movieCard.querySelector('.movie-title');
@@ -33,7 +32,7 @@ const popup = async (movieCard) => {
     });
   }
 
-  //listener for creating new comments
+  // listener for creating new comments
   popUpBtn.addEventListener('click', async (event) => {
     event.preventDefault();
     const username = document.getElementById('username').value;

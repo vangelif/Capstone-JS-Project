@@ -131,6 +131,7 @@ section #popup-wrapper {
 section #popup-window {
   background-color: rgba(255, 188, 193);
   margin: 10% auto;
+
   /* width: 30%; */
   padding: 20px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5), 0 7px 50px 0 rgba(0, 0, 0, 0.7);
@@ -145,7 +146,7 @@ table {
   /* border: 1px solid black; */
   margin: 20px auto;
   width: 100%;
-  padding: 0px 30px;
+  padding: 0 30px;
   font-size: 18px;
 }
 
