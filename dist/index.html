@@ -18,15 +18,45 @@
     <header>
       <div><i class="fas fa-play"></i></div>
       <a href=""><span>Our Movies</span></a>
-      <button id="show-popup-button">Show Popup</button>
     </header>
+    <!--popup-->
+    <section class="popup-section">
+      <div id="popup-wrapper">
+        <div id="popup-window">
+          <span id="close-button">
+            <i class="fas fa-times-circle"></i>
+          </span>
+          <div class="popup-image">
+            <img class="movie-image" src="${target.image.medium}" />
+          </div>
+          <div>
+            <h3 class="movie-name">${target.name}</h3>
+            <p>${target.summary}</p>
+            <h4>Comments</h4>
+            <span id="comment-counter">2</span>
+            <table>
+              <tbody id="table-body"></tbody>
+            </table>
+            <form>
+              <div>
+                <input type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <textarea
+                  name="comment"
+                  placeholder="Your insight"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Comment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section>
       <div class="card-container" id="movies"></div>
-    </section>
-    <!--popup-->
-    <section>
-      <div id="popup-wrapper" class="hide"></div>
     </section>
 
     <footer>Created by Hiwot and Vangelis under CC licence.</footer>
