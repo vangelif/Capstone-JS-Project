@@ -30,4 +30,24 @@ const movieList = async () => {
   });
 };
 
+// const commentsBtn = document.querySelectorAll('.comment-button');
+// console.log(commentsBtn.id);
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Select the commentsBtn element after the DOM has loaded
+//   const commentsBtn = document.querySelectorAll('.comment-button');
+//   console.log(commentsBtn);
+//   commentsBtn.forEach((button) => {
+//     button.addEventListener('click', async (event) => {
+//       event.preventDefault();
+//       const targetModal = document.querySelector(
+//         event.target.getAttribute('data-target')
+//       );
+//       console.log(`target Model:${targetModal}`);
+//       await popup(event);
+//       targetModal.style.display = 'block';
+//     });
+//   });
+// });
+
 export { movieApi, movieList };
