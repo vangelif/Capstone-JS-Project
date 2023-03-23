@@ -112,10 +112,6 @@ button:hover {
   position: relative;
 }
 
-section.popup-section {
-  border: 3px solid black;
-}
-
 section #popup-wrapper {
   display: none;
   position: fixed;

@@ -1,5 +1,5 @@
-import modalShow from './modalShow.js';
 import getShowById from './show.js';
+import modalShow from './modalShow.js';
 
 const popup = async (movieCard) => {
   const movieTitle = movieCard.querySelector('.movie-title');
