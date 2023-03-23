@@ -8,24 +8,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Capstone Project</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <div> <i class='fas fa-play'></i></div>
+      <div><i class="fas fa-play"></i></div>
       <a href=""><span>Our Movies</span></a>
     </header>
+    <!--popup-->
+    <section class="popup-section">
+      <div id="popup-wrapper">
+        <div id="popup-window">
+          <span id="close-button">
+            <i id="x-button" class="fas fa-times-circle"></i>
+          </span>
+          <div class="popup-image">
+            <img class="movie-image" src="dummy" />
+          </div>
+          <div>
+            <h3 class="movie-name"></h3>
+            <p class="summary"></p>
+            <h4>Comments</h4>
+            <span id="comment-counter">2</span>
+            <table>
+              <tbody id="table-body"></tbody>
+            </table>
+            <form>
+              <div>
+                <input type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <textarea
+                  name="comment"
+                  placeholder="Your insight"
+                  required
+                ></textarea>
+              </div>
+              <button id="submit-button" type="submit">Comment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section>
       <div class="card-container" id="movies"></div>
     </section>
 
-    <footer>
-      Created by Hiwot and Vangelis under CC licence.
-    </footer>
+    <footer>Created by Hiwot and Vangelis under CC licence.</footer>
   </body>
 
-  <script src="main.js"></script>
+  <!-- <script src="main.js"></script> -->
 </html>

@@ -1,9 +1,11 @@
 * {
   color: black;
+  margin: 0.1em;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: powderblue;
+  background-color: rgb(176, 224, 230);
   text-decoration: none;
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
@@ -42,7 +44,8 @@ li {
 
 .movie-cards {
   /* text-align: center; */
-  background-color: lightpink;
+
+  /* background-color: lightpink; */
   padding: 10px;
   border-radius: 5px;
   margin: 0;
@@ -93,4 +96,84 @@ footer {
   padding-block: 15px;
   letter-spacing: 00.2em;
   margin-left: 30px;
+}
+
+button:hover {
+  border: 5px solid black;
+  border-bottom: 3px solid black;
+}
+
+#close-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  position: relative;
+}
+
+section #popup-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  background-color: rgb(176, 224, 230, 0.7);
+  z-index: 1;
+}
+
+section #popup-window {
+  background-color: rgba(255, 188, 193);
+  margin: 10% auto;
+  width: 25%;
+  padding: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5), 0 7px 50px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
+.popup-image {
+  padding: 10px;
+}
+
+#popup-window div > h3 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+#popup-window div > p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+#popup-window div > h4 {
+  padding: 10px;
+}
+
+#popup-window div > span {
+  padding: 10px;
+}
+
+form {
+  text-align: center;
+  width: 100%;
+  margin-block-end: 2rem;
+}
+
+form input {
+  width: 100%;
+  padding-block: 0.4rem;
+}
+
+form textarea {
+  text-align: left;
+  width: 100%;
+  height: 80px;
+}
+
+.bottom {
+  margin-bottom: 70px;
 }
