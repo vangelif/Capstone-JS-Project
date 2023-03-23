@@ -2,7 +2,7 @@ import './style.css';
 import { movieList } from './modules/homepage.js';
 import popup from './modules/popup.js';
 import modalClose from './modules/modalClose.js';
-import createComment from './modules/createComment';
+import createComment from './modules/app.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await movieList();
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   submitComment.addEventListener('click', async () => {
-    alert('i am here!!');
+    // alert('i am here!!');
     createComment();
 
-    //create a function to get the input.value and textarea.value
+    // create a function to get the input.value and textarea.value
     //
   });
 });
