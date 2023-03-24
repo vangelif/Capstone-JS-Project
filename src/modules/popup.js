@@ -1,5 +1,5 @@
 import getShowById from './show.js';
-import { getComments, giveComments } from './comments.js';
+import { giveComments } from './comments.js';
 import modalShow from './modalShow.js';
 
 const popup = async (movieCard) => {
@@ -7,7 +7,6 @@ const popup = async (movieCard) => {
   const movieImgSrc = movieCard.querySelector('.movie-img');
   const modal = document.querySelector('#popup-wrapper');
   const movieId = movieTitle.dataset.id;
-  console.log(movieId);
   const data = await getShowById(movieId);
   // // get past comments already submitted
   const popUpBtn = modal.querySelector('#submit-button');
@@ -17,38 +16,30 @@ const popup = async (movieCard) => {
   modal.querySelector('.summary').innerHTML = data.summary;
   modal.querySelector('.movie-name').textContent = movieTitle.textContent;
   modal.querySelector('.movie-image').src = movieImgSrc.src;
-  // calling the getComments function
-  commentTable.innerHTML = '';
-  const comments = await getComments(movieId);
-  console.log(comments);
-  if (Array.isArray(comments)) {
-    // const commentRow = document.createElement('tr');
-    const commentRow = document.createElement('tr');
-    commentRow.textContent = `Comments(${(comments.length += 1)})`;
-    commentTable.appendChild(commentRow);
-    console.log(comments);
-    comments.forEach((comment) => {
-      const commentDate = document.createElement('td');
-      commentDate.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-      commentTable.appendChild(commentDate);
-    });
-  }
-  modalShow();
+
+  // Add a flag to track whether comments have already been loaded
+  const load = false;
+
   // listener for creating new comments
   popUpBtn.addEventListener('click', async (event) => {
     event.preventDefault();
-    const username = document.getElementById('username').value;
-    const comment = document.getElementById('insights').value;
-    if (username !== '' || comment !== '') {
-      giveComments({ movieId, username, comment });
+    const name = modal.querySelector('#username').value;
+    const comments = modal.querySelector('#insights').value;
+    const movieTitle = modal.querySelector('.movie-name');
+    const movieId = movieTitle.dataset.id;
+    if (name !== '' || comments !== '') {
+      giveComments({ movieId, name, comments });
       const newCommentRow = document.createElement('tr');
       newCommentRow.textContent = `${new Date()
         .toISOString()
-        .slice(0, 10)} ${username}: ${comment}`;
+        .slice(0, 10)} ${name}: ${comments}`;
       commentTable.appendChild(newCommentRow);
       commentForm.reset();
     }
   });
+
+  // Call loadComments when the modal is shown
+  modalShow(movieId, load);
 };
 
 export default popup;

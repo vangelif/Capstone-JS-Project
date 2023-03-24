@@ -19,10 +19,11 @@ export const getComments = async (movieId) => {
 
 export const giveComments = async ({ movieId, name, comments }) => {
   const appId = await createApp();
+  console.log(`movieid: ${movieId}:Name:${name}:Comments:${comments}`);
   const response = await fetch(`${capstoneApiURL}/${appId}/comments`, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       item_id: movieId,
@@ -31,5 +32,5 @@ export const giveComments = async ({ movieId, name, comments }) => {
     }),
   });
   const data = await response.json();
-  return data.result;
+  return data;
 };
