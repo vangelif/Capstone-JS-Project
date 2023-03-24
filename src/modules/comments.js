@@ -8,7 +8,7 @@ export const getComments = async (movieId) => {
       `${capstoneApiURL}/${appId}/comments?item_id=${movieId}`,
       {
         method: 'GET',
-      }
+      },
     );
     const data = await response.json();
     return data;
