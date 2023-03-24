@@ -20,11 +20,13 @@ const popup = async (movieCard) => {
   // calling the getComments function
   commentTable.innerHTML = '';
   const comments = await getComments(movieId);
+  console.log(comments);
   if (Array.isArray(comments)) {
     // const commentRow = document.createElement('tr');
     const commentRow = document.createElement('tr');
     commentRow.textContent = `Comments(${(comments.length += 1)})`;
     commentTable.appendChild(commentRow);
+    console.log(comments);
     comments.forEach((comment) => {
       const commentDate = document.createElement('td');
       commentDate.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;

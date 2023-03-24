@@ -19,6 +19,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   xButton.addEventListener('click', async () => {
     modalClose();
-    window.addEventListener('load');
   });
 });
