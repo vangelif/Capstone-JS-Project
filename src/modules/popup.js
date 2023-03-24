@@ -7,6 +7,7 @@ const popup = async (movieCard) => {
   const movieImgSrc = movieCard.querySelector('.movie-img');
   const modal = document.querySelector('#popup-wrapper');
   const movieId = movieTitle.dataset.id;
+  console.log(movieId);
   const data = await getShowById(movieId);
   // // get past comments already submitted
   const popUpBtn = modal.querySelector('#submit-button');
@@ -17,28 +18,20 @@ const popup = async (movieCard) => {
   modal.querySelector('.movie-name').textContent = movieTitle.textContent;
   modal.querySelector('.movie-image').src = movieImgSrc.src;
   // calling the getComments function
-  // commmentTable.innerHTML = '';
+  commentTable.innerHTML = '';
   const comments = await getComments(movieId);
   if (Array.isArray(comments)) {
     // const commentRow = document.createElement('tr');
     const commentRow = document.createElement('tr');
+    commentRow.textContent = `Comments(${(comments.length += 1)})`;
+    commentTable.appendChild(commentRow);
     comments.forEach((comment) => {
       const commentDate = document.createElement('td');
-      commentDate.textContent = `${comment.creation_date}`;
-      const commentName = document.createElement('td');
-      commentName.textContent = `${comment.username}`;
-      const commentInsight = document.createElement('td');
-      commentInsight.textContent = `${comment.comment}`;
-      const lineBreak = document.createElement('br');
-      lineBreak.innerHTML = '';
-      commentRow.appendChild(commentDate);
-      commentRow.appendChild(commentName);
-      commentRow.appendChild(commentInsight);
-      commentRow.appendChild(lineBreak);
-      commentTable.appendChild(commentRow);
+      commentDate.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+      commentTable.appendChild(commentDate);
     });
   }
-
+  modalShow();
   // listener for creating new comments
   popUpBtn.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -47,23 +40,13 @@ const popup = async (movieCard) => {
     if (username !== '' || comment !== '') {
       giveComments({ movieId, username, comment });
       const newCommentRow = document.createElement('tr');
-      const newCommentDate = document.createElement('td');
-      newCommentDate.textContent = `${new Date().toISOString().slice(0, 16)}`;
-      const newCommentName = document.createElement('td');
-      newCommentName.textContent = `${username}`;
-      const newCommentInsight = document.createElement('td');
-      newCommentInsight.textContent = `${comment}`;
-
-      newCommentRow.appendChild(newCommentDate);
-      newCommentRow.appendChild(newCommentName);
-      newCommentRow.appendChild(newCommentInsight);
-
+      newCommentRow.textContent = `${new Date()
+        .toISOString()
+        .slice(0, 10)} ${username}: ${comment}`;
       commentTable.appendChild(newCommentRow);
       commentForm.reset();
     }
   });
-
-  modalShow();
 };
 
 export default popup;
