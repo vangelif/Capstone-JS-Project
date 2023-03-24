@@ -1,4 +1,5 @@
 import { getnumberofLikes, Interactlikebutton } from './likeItems.js';
+import itemsCounter from './itemCounter.js';
 
 const movieApi = async () => {
   const fetchResult = await fetch('https://api.tvmaze.com/shows');
@@ -7,6 +8,7 @@ const movieApi = async () => {
   return movies;
 };
 movieApi();
+const movieCount = document.querySelector('.item-count');
 
 const movieList = async () => {
   const allMovies = await movieApi();
@@ -29,6 +31,7 @@ const movieList = async () => {
   });
   getnumberofLikes();
   Interactlikebutton();
+  itemsCounter(allMovies, movieCount);
 };
 
 export { movieApi, movieList };
