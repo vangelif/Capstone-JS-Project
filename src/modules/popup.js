@@ -8,26 +8,33 @@ const popup = async (movieCard) => {
   const modal = document.querySelector('#popup-wrapper');
   const movieId = movieTitle.dataset.id;
   const data = await getShowById(movieId);
-  modal.querySelector('.summary').innerHTML = data.summary;
-  modal.querySelector('.movie-name').textContent = movieTitle.textContent;
-  modal.querySelector('.movie-image').src = movieImgSrc.src;
-
-  // get past comments already submitted
+  // // get past comments already submitted
   const popUpBtn = modal.querySelector('#submit-button');
   const commentForm = modal.querySelector('#comment-form');
   const commentTable = modal.querySelector('#table-body');
 
+  modal.querySelector('.summary').innerHTML = data.summary;
+  modal.querySelector('.movie-name').textContent = movieTitle.textContent;
+  modal.querySelector('.movie-image').src = movieImgSrc.src;
+  // calling the getComments function
   // commmentTable.innerHTML = '';
   const comments = await getComments(movieId);
   if (Array.isArray(comments)) {
     // const commentRow = document.createElement('tr');
     const commentRow = document.createElement('tr');
     comments.forEach((comment) => {
-      const commentData = document.createElement('td');
-      commentData.textContent = `${comment.creation_date}
-      ${comment.username}
-      ${comment.comment}`;
-      commentRow.appendChild(commentData);
+      const commentDate = document.createElement('td');
+      commentDate.textContent = `${comment.creation_date}`;
+      const commentName = document.createElement('td');
+      commentName.textContent = `${comment.username}`;
+      const commentInsight = document.createElement('td');
+      commentInsight.textContent = `${comment.comment}`;
+      const lineBreak = document.createElement('br');
+      lineBreak.innerHTML = '';
+      commentRow.appendChild(commentDate);
+      commentRow.appendChild(commentName);
+      commentRow.appendChild(commentInsight);
+      commentRow.appendChild(lineBreak);
       commentTable.appendChild(commentRow);
     });
   }

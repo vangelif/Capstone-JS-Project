@@ -1,14 +1,14 @@
 import { capstoneApiURL } from './url.js';
 import createApp from './app.js';
 
-export const getComments = async (showId) => {
+export const getComments = async (movieId) => {
   const appId = await createApp();
   try {
     const response = await fetch(
-      `${capstoneApiURL}/${appId}/comments?item_id=${showId}`,
+      `${capstoneApiURL}/${appId}/comments?item_id=${movieId}`,
       {
         method: 'GET',
-      },
+      }
     );
     const data = await response.json();
     return data;
@@ -17,7 +17,7 @@ export const getComments = async (showId) => {
   }
 };
 
-export const giveComments = async ({ showId, username, comment }) => {
+export const giveComments = async ({ movieId, username, comment }) => {
   const appId = await createApp();
   const response = await fetch(`${capstoneApiURL}/${appId}/comments`, {
     method: 'POST',
@@ -25,7 +25,7 @@ export const giveComments = async ({ showId, username, comment }) => {
       'Content-type': 'application/json',
     },
     body: JSON.stringify({
-      item_id: showId,
+      item_id: movieId,
       username,
       comment,
     }),
