@@ -33,18 +33,32 @@
             <h3 class="movie-name"></h3>
             <p class="summary"></p>
             <h4>Comments</h4>
-            <span id="comment-counter">2</span>
+            <span id="comment-counter">(2)</span>
             <table>
-              <tbody id="table-body"></tbody>
+              <tbody id="table-body">
+                <!-- <tr>
+                  <td>date</td>
+                  <td>name</td>
+                  <td>textarea</td>
+                </tr> -->
+              </tbody>
             </table>
-            <form>
+            <form id="comment-form">
               <div>
-                <input type="text" placeholder="Your name" required />
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Your name"
+                  maxlength="30"
+                  required
+                />
               </div>
               <div>
                 <textarea
+                  id="insights"
                   name="comment"
                   placeholder="Your insight"
+                  maxlength="80"
                   required
                 ></textarea>
               </div>
