@@ -19,7 +19,7 @@
 
 # 📖 [Capstone Project] <a name="about-project"></a>
 
-**Capstone Project** is a project that we are applying our knowledge on HTML and CSS and Javascript to store the name and score of its participant.
+**Capstone Project** is a project that we are applying our knowledge on HTML and CSS and JavaScript to fetch movies from TVMAZE API, and allow users to post comments, likes, read summaries of movies that they choose to and update our base API with their comments and likes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -58,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="#">Check out the live demo</a>
+- <a href="https://www.loom.com/share/c9270170ea7f4e4e9838410a701e4aff">Check out the live demo</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -99,14 +99,13 @@ To run the project, use Visual Studio Code Liver Server:
 
 👤 **Hiwot Bayissa**
 
-- [@github](https://github.com/vangelif)
-- [@twitter](https://twitter.com/vangfot)
-- [@linkedin](https://www.linkedin.com/in/vangfot/)
-- [@articles](https://vangelis.website/essays)
+- [@github](https://github.com/hiwina)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [User automatically gets the score]
+- [User send and receive friend requests]
+- [User can login with private credentials]
+- [User can use IM chat log to interact with friends]
 
 ## 🤝 Contributing <a name="contributing"></a>
 
