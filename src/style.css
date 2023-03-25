@@ -80,8 +80,8 @@ img {
 button {
   width: 100%;
   padding: 15px;
-  background-color: grey;
-  border: 1px solid beige;
+  background-color: lightgrey;
+  border: 1px solid black;
   border-radius: 10px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -103,8 +103,10 @@ footer {
 }
 
 button:hover {
-  border: 5px solid black;
-  border-bottom: 3px solid black;
+  /* border: 5px solid black; */
+  border-bottom: 8px solid black;
+  border-right: 10px solid black;
+  font-weight: 700;
 }
 
 #close-button {
@@ -133,24 +135,48 @@ section #popup-wrapper {
 section #popup-window {
   background-color: rgba(255, 188, 193);
   margin: 10% auto;
-  width: 25%;
+
+  /* width: 30%; */
   padding: 20px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5), 0 7px 50px 0 rgba(0, 0, 0, 0.7);
   border-radius: 20px;
 }
 
+#popup-window button {
+  width: 35%;
+}
+
+table {
+  /* border: 1px solid black; */
+  margin: 20px auto;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 18px;
+}
+
+#table-body td {
+  /* border: 1px solid black; */
+  width: 15%;
+  font-weight: 700;
+}
+
+#table-body td:last-child {
+  width: 65%;
+  font-weight: 500;
+}
+
 .popup-image {
-  padding: 10px;
+  padding: 20px;
 }
 
 #popup-window div > h3 {
   font-size: 30px;
-  padding: 10px;
+  padding: 20px;
 }
 
 #popup-window div > p {
   font-size: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 #popup-window div > h4 {
@@ -162,14 +188,18 @@ section #popup-window {
 }
 
 form {
-  text-align: center;
+  text-align: left;
   width: 100%;
   margin-block-end: 2rem;
 }
 
+form div {
+  padding-bottom: 20px;
+}
+
 form input {
-  width: 100%;
-  padding-block: 0.4rem;
+  width: 60%;
+  padding-block: 0.8rem;
 }
 
 form textarea {
@@ -180,4 +210,22 @@ form textarea {
 
 .bottom {
   margin-bottom: 70px;
+}
+
+@media screen and (max-width: 780px) {
+  section #popup-window {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  section #popup-window {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section #popup-window {
+    width: 35%;
+  }
 }

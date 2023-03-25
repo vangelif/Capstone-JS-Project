@@ -4,7 +4,7 @@ import itemsCounter from './itemCounter.js';
 const movieApi = async () => {
   const fetchResult = await fetch('https://api.tvmaze.com/shows');
   const ShowResult = await fetchResult.json();
-  const movies = ShowResult.slice(0, 12);
+  const movies = ShowResult.slice(0, 132);
   return movies;
 };
 movieApi();
