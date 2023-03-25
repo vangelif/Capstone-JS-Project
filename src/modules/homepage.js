@@ -22,7 +22,7 @@ const movieList = async () => {
                         </div>
                         <a href="${card.officialSite}" class="movie-title" data-id=${card.id}>${card.name}</a>
                         <div class="movie-info">
-                          <i class="fa fa-heart like-count like-btn" aria-hidden="true"></i> <p> likes</p>
+                          <i class="fa fa-heart like-count like-btn" id ="lik"aria-hidden="true"></i> <p> likes</p>
                         </div>
                         <button class="comment-button" id="${card.id}" data-target="#popup-wrapper">Comments</button>`;
 
