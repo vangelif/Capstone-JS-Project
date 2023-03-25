@@ -147,7 +147,7 @@ section #popup-window {
   width: 35%;
 }
 
-table {
+div#comments-wrapper {
   /* border: 1px solid black; */
   margin: 20px auto;
   width: 100%;
@@ -155,16 +155,15 @@ table {
   font-size: 18px;
 }
 
-#table-body td {
-  /* border: 1px solid black; */
+/* #table-body td {
   width: 15%;
   font-weight: 700;
-}
+} */
 
-#table-body td:last-child {
+/* #table-body td:last-child {
   width: 65%;
   font-weight: 500;
-}
+} */
 
 .popup-image {
   padding: 20px;
