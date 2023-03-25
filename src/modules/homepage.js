@@ -1,4 +1,4 @@
-import { getnumberofLikes, Interactlikebutton } from './likeItems.js';
+import { getnumberofLikes, interactLikeButton } from './likeItems.js';
 import itemsCounter from './itemCounter.js';
 
 const movieApi = async () => {
@@ -30,7 +30,7 @@ const movieList = async () => {
     CardContainer.appendChild(cardUL);
   });
   getnumberofLikes();
-  Interactlikebutton();
+  interactLikeButton();
   itemsCounter(allMovies, movieCount);
 };
 

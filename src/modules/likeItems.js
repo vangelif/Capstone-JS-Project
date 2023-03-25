@@ -14,26 +14,25 @@ const getnumberofLikes = async () => {
       });
     });
 };
-const Interactlikebutton = async () => {
-  const likeBtns = document.querySelectorAll('.like-btn');
-  const likeBtnIcon = document.querySelectorAll('.fa-heart');
-  const likeBtnCount = document.querySelectorAll('.like-count');
+
+const interactLikeButton = () => {
   const cards = document.querySelectorAll('.cards');
+  const likeBtns = document.querySelectorAll('.like-btn');
+  const likeCounts = document.querySelectorAll('.like-count');
   likeBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      likeBtnIcon[index].classList.remove('fa-regular');
-      likeBtnIcon[index].classList.add('fa-solid');
-      likeBtnCount[index].innerHTML = Number(likeBtnCount[index].innerHTML) + 1;
-      fetch(url, {
+    btn.addEventListener('click', async () => {
+      const response = await fetch(url, {
         method: 'POST',
-        body: JSON.stringify({
-          item_id: cards[index].id,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
+        body: JSON.stringify({ item_id: cards[index].id }),
+        headers: { 'Content-Type': 'application/json' },
       });
+      if (response.ok) {
+        const json = await response.json();
+        likeCounts[index].textContent = json.likes;
+      }
+      await getnumberofLikes();
     });
   });
 };
-export { getnumberofLikes, Interactlikebutton };
+
+export { getnumberofLikes, interactLikeButton };
