@@ -29,7 +29,7 @@ const popup = async (movieCard) => {
     const movieId = movieTitle.dataset.id;
     if (name !== '' || comments !== '') {
       giveComments({ movieId, name, comments });
-      const newCommentRow = document.createElement('tr');
+      const newCommentRow = document.createElement('li');
       newCommentRow.textContent = `${new Date()
         .toISOString()
         .slice(0, 10)} ${name}: ${comments}`;
