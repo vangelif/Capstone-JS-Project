@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Hiwot & Vangelis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Capstone Project</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <header>
+      <ul>
+        <li class="nav-items">
+          <a href="#index.html" class="item-count">Movies</a>
+          <a href="#">Series</a>
+          <a href="#">Geners</a>
+        </li>
+      </ul>
+    </header>
+    <!--popup-->
+    <section class="popup-section">
+      <div id="popup-wrapper">
+        <div id="popup-window">
+          <span id="close-button">
+            <i id="x-button" class="fas fa-times-circle"></i>
+          </span>
+          <div class="popup-image">
+            <img class="movie-image" src="dummy" />
+          </div>
+          <div>
+            <h3 class="movie-name"></h3>
+            <p class="summary"></p>
+            <!-- <h4>Comments</h4>
+            <span id="comment-counter">(2)</span> -->
+            <div id="comments-wrapper">
+              <ul id="table-body">
+                <li>asd</li>
+                <!-- <tr>
+                  <td>date</td>
+                  <td>name</td>
+                  <td>textarea</td>
+                </tr> -->
+              </ul>
+            </div>
+            <form id="comment-form">
+              <div>
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Your name"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <textarea
+                  id="insights"
+                  name="comment"
+                  placeholder="Your insight"
+                  maxlength="80"
+                  required
+                ></textarea>
+              </div>
+              <button id="submit-button" type="submit">Comment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card-container" id="movies"></div>
+    </section>
+
+    <footer>Created by Hiwot and Vangelis under CC licence.</footer>
+  </body>
+
+  <!-- <script src="main.js"></script> -->
+</html>
