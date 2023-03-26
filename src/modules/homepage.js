@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { getnumberofLikes, interactLikeButton } from './likeItems.js';
 import itemsCounter from './itemCounter.js';
 

@@ -23,6 +23,9 @@ module.exports = {
       },
     ],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack App',
